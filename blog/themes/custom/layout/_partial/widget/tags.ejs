@@ -1,0 +1,11 @@
+
+<% if (theme.widgets.tags && site.tags.length){ %>
+    <div class="sidebar-module">
+        <h4>Tags</h4>
+        <p>
+            <% site.tags.sort('name').each(function(item){ %>
+                <a href="<%- config.root %><%- item.path %>" style="font-size: 30px"><%= item.name %></a>
+            <% }); %>
+        </p>
+    </div>
+<% } %>
